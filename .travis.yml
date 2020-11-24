@@ -29,20 +29,21 @@
   # region : 현재 사용하고 있는 aws의 물리적 장소
   # app : 생성된 어플리케이션의 이름
   # env : app-env (env 이름 지정 안했을 시)
-  # bucket_name : 해당 elasticbeanstalk을 위한 버켓 이름
+  # bucket_name : 해당 elasticbeanstalk을 위한 버켓 이름 fixed bucket
   # bucket_path : app 이름
   # branch : travis.yml에서 테스트/배포할 branch
   # access_key_id : IAM에서 ROOT 사용자가 권한을 준 USER의 KEY travis.org setting에도 등록
   # secret_access_key : 동일
-  
+
   deploy:
     provider: elasticbeanstalk
     region: "ap-northeast-2"
     app: "docker-react-app"
     env: "DockerReactApp-env"
-    bucket_name: "elasticbeanstalk-ap-northeast-2-285164948650"
+    bucket: "elasticbeanstalk-ap-northeast-2-285164948650"
     bucket_path: "docker-react-app"
     on:
       branch: master
+
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_ACCESS_KEY
