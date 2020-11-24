@@ -10,7 +10,7 @@
     - docker build -t syacooms/docker-react-app -f Dockerfile.dev .
 
   script:
-    - docker run -e CI-true syacooms/docker-react-app npm run test -- --coverage
+    - docker run -e CI=true syacooms/docker-react-app npm run test -- --coverage
 
   after_success:
     - echo "Test Success"
