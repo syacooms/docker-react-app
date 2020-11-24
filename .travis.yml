@@ -13,7 +13,7 @@
   # Artful Aardvark (17.10)
   # Bionic Beaver (18.04)
   # ----------------------------
-  dist: bionic
+  dist: xenial
 
   services:
     - docker
